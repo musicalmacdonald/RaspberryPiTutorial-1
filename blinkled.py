@@ -15,28 +15,40 @@ def blink_led_forever():
     while True:
         blink_led_once(1)
 
-def race_led():
+def race_led(blink_frequency):
     #led 1
-    blink_led_once(2, 18)
+    blink_led_once(blink_frequency, 18)
     #led 2
-    blink_led_once(2, 23)
+    blink_led_once(blink_frequency, 23)
     #led 3
-    blink_led_once(2, 25)
+    blink_led_once(blink_frequency, 25)
     #led 4
-    blink_led_once(2, 12)
+    blink_led_once(blink_frequency, 12)
     #led 5
-    blink_led_once(2, 16)
+    blink_led_once(blink_frequency, 16)
     #led 6
-    blink_led_once(2, 20)
+    blink_led_once(blink_frequency, 20)
     #led 7
-    blink_led_once(2, 21)
+    blink_led_once(blink_frequency, 21)
     #led 8
-    blink_led_once(2, 26)
+    blink_led_once(blink_frequency, 26)
     #led 9
-    blink_led_once(2, 19)
+    blink_led_once(blink_frequency, 19)
     #led 10
-    blink_led_once(2, 13)
+    blink_led_once(blink_frequency, 13)
 
 if __name__ == "__main__":
     print("This will make the LED blink once")
     blink_led_once(2, 18)
+    
+    print ("This will make them race")
+    race_led(1)
+    
+    
+    print("Come on, we can go faster!")
+    race_led(.5)
+    
+    print("Faster!")
+    race_led(.1)
+    print("Woohoo!")
+    
